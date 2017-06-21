@@ -6,8 +6,12 @@ body {
    font: #{$font-size--base} / #{$grid--leading} $font-stack;
 }
 
-strong {
+h1 {
    font-weight: bold;
+
+   span {
+      font-weight: normal;
+   }
 }
 
 ol {
