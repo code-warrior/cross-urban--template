@@ -36,10 +36,10 @@ li {
 
    p {
       text-align: right;
-      top: 652px; //667px;
-      left: 24px;
+      top: $height--first-picture;
+      left: $grid--column-width + 3;
       position: absolute;
-      width: 567px;
+      width: $height--first-picture;
       transform-origin: top left;
       transform: rotate(-90deg);
 
