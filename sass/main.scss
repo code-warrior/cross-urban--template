@@ -24,9 +24,10 @@ li {
 
 #container {
    margin: auto;
-   width: 1241px;
-   height: 733px;
-   border: 1px solid black;
+   width: (31 * $grid--unit) + 10;
+   padding-top: (6 * $grid--leading);
+   padding-bottom: (6 * $grid--leading);
+   border: 1px solid #aaa;
 }
 
 .countries-where-pictures-were-taken {
