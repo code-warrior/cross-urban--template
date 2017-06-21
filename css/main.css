@@ -1,3 +1,43 @@
+a, abbr, address, article, aside, audio, b, blockquote, body, canvas, caption,
+cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption,
+figure, footer, form, h1, h2, h3, h4, h5, h6, header, html, i, iframe, img, ins,
+kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby,
+section, samp, small, span, strong, sub, summary, sup, table, tbody, td, tfoot,
+th, thead, time, tr, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, menu, nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 /* latin-ext */
 @font-face {
   font-family: 'Roboto Condensed';
@@ -62,52 +102,23 @@
   src: local("Roboto Condensed Bold Italic"), local("RobotoCondensed-BoldItalic"), url(../fonts/RobotoCondensed/BoldItalic/mg0cGfGRUERshzBlvqxeAD80_Kjvv-UM5FLsk7nHpemglnMp3_3A8V8Ai8YosRtX.woff2) format("woff2"), url(https://fonts.gstatic.com/s/robotocondensed/v14/mg0cGfGRUERshzBlvqxeAD80_Kjvv-UM5FLsk7nHpemglnMp3_3A8V8Ai8YosRtX.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
-a, abbr, address, article, aside, audio, b, blockquote, body, canvas, caption,
-cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption,
-figure, footer, form, h1, h2, h3, h4, h5, h6, header, html, i, iframe, img, ins,
-kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby,
-section, samp, small, span, strong, sub, summary, sup, table, tbody, td, tfoot,
-th, thead, time, tr, ul, var, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-article, aside, details, figcaption, figure, footer, header, menu, nav,
-section {
-  display: block;
-}
-
+/*
+$grid--column-width: 20px;
+$grid--gutter-width: 10px;
+$grid--unit: ($grid--column-width + $grid--gutter-width);
+$grid--column-count: 42;
+$grid--leading: 14px;
+Use split gutters
+ */
 body {
-  line-height: 1;
-  font-family: 'Open Sans', sans-serif;
+  font: 15.625px / 14px "Roboto Condensed", sans-serif;
 }
 
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-body {
-  font: 15.625px / 14px 'Roboto Condensed', sans-serif;
-}
-
-strong {
+h1 {
   font-weight: bold;
+}
+h1 span {
+  font-weight: normal;
 }
 
 ol {
@@ -119,10 +130,12 @@ li {
 }
 
 #container {
+  overflow: auto;
   margin: auto;
-  width: 1241px;
-  height: 733px;
-  border: 1px solid black;
+  width: 1250px;
+  padding-top: 84px;
+  padding-bottom: 84px;
+  border: 1px solid #aaa;
 }
 
 .countries-where-pictures-were-taken {
@@ -130,25 +143,32 @@ li {
 }
 .countries-where-pictures-were-taken p {
   text-align: right;
-  top: 652px;
-  left: 24px;
+  top: 570px;
+  left: 23px;
   position: absolute;
-  width: 567px;
+  width: 570px;
   transform-origin: top left;
   transform: rotate(-90deg);
 }
 
-.picture {
-  float: left;
+section {
+  width: 570px;
+  height: 190px;
   display: inline-block;
-  margin-left: 135px;
-  margin-top: 85px;
-  margin-right: 64px;
 }
 
-.definition {
-  width: 300px;
-  height: 188px;
-  margin-top: 85px;
-  display: inline-block;
+picture {
+  float: left;
+}
+picture:first-of-type {
+  margin-left: 120px;
+  margin-right: 60px;
+}
+picture:first-of-type img {
+  width: 380px;
+  height: 570px;
+}
+picture:last-of-type img {
+  width: 570px;
+  height: 380px;
 }
