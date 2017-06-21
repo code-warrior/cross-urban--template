@@ -47,16 +47,18 @@ li {
    }
 }
 
-.picture {
-   float: left;
    display: inline-block;
    margin-left: 135px;
    margin-top: 85px;
    margin-right: 64px;
 
-   &--country-of-origin {
+picture {
+   &:first-of-type {
+      float: left;
+      display: inline-block;
+      margin-left: (3 * $grid--unit);
+      margin-right: (1.5 * $grid--unit);
    }
-}
 
 .definition {
    width: 300px;
