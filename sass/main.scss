@@ -23,6 +23,7 @@ li {
 }
 
 #container {
+   overflow: auto;
    margin: auto;
    width: (31 * $grid--unit) + 10;
    padding-top: (6 * $grid--leading);
@@ -57,9 +58,9 @@ li {
    margin-right: 64px;
 
 picture {
+   float: left;
+
    &:first-of-type {
-      float: left;
-      display: inline-block;
       margin-left: (3 * $grid--unit);
       margin-right: (1.5 * $grid--unit);
    }
