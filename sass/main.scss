@@ -45,10 +45,11 @@ li {
    }
 }
 
+section {
+   width: $width--second-picture;
+   height: ($height--first-picture - $height--second-picture);
    display: inline-block;
-   margin-left: 135px;
-   margin-top: 85px;
-   margin-right: 64px;
+}
 
 picture {
    float: left;
