@@ -25,7 +25,7 @@ li {
 #container {
    overflow: auto;
    margin: auto;
-   width: (31 * $grid--unit) + 10;
+   width: (41 * $grid--unit) + $grid--column-width;
    padding-top: (6 * $grid--leading);
    padding-bottom: (6 * $grid--leading);
    border: 1px solid #aaa;
@@ -55,8 +55,8 @@ picture {
    float: left;
 
    &:first-of-type {
-      margin-left: (3 * $grid--unit);
-      margin-right: (1.5 * $grid--unit);
+      margin-left: (4 * $grid--unit);
+      margin-right: (2 * $grid--unit);
 
       img {
          width: $width--first-picture;
