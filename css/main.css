@@ -102,14 +102,6 @@ table {
   src: local("Roboto Condensed Bold Italic"), local("RobotoCondensed-BoldItalic"), url(../fonts/RobotoCondensed/BoldItalic/mg0cGfGRUERshzBlvqxeAD80_Kjvv-UM5FLsk7nHpemglnMp3_3A8V8Ai8YosRtX.woff2) format("woff2"), url(https://fonts.gstatic.com/s/robotocondensed/v14/mg0cGfGRUERshzBlvqxeAD80_Kjvv-UM5FLsk7nHpemglnMp3_3A8V8Ai8YosRtX.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
-/*
-$grid--column-width: 20px;
-$grid--gutter-width: 10px;
-$grid--unit: ($grid--column-width + $grid--gutter-width);
-$grid--column-count: 42;
-$grid--leading: 14px;
-Use split gutters
- */
 body {
   font: 15.625px / 14px "Roboto Condensed", sans-serif;
 }
