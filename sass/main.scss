@@ -24,6 +24,10 @@ li {
 }
 
 #container {
+   @include max-width-media-query($breakpoint--large) {
+      width: $width--large-container;
+   }
+
    overflow: auto;
    margin: auto;
    width: $width--extra-large-container;
