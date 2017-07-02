@@ -69,8 +69,9 @@ picture {
       margin-right: (2 * $grid--unit);
 
       img {
-         width: $width--first-picture;
          height: $height--first-picture;
+
+         width: $width--portrait-image-at-breakpoint-extra-large;
       }
    }
 
