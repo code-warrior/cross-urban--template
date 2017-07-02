@@ -1,6 +1,7 @@
 @import 'reset';
 @import 'fonts';
 @import 'variables';
+@import 'mixins';
 
 body {
    font: #{$font-size--base} / #{$grid--leading} $font-stack;
