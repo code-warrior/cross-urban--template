@@ -26,7 +26,7 @@ li {
 #container {
    overflow: auto;
    margin: auto;
-   width: (41 * $grid--unit) + $grid--column-width;
+   width: $width--extra-large-container;
    padding-top: (6 * $grid--leading);
    padding-bottom: (6 * $grid--leading);
    border: 1px solid #aaa;
