@@ -129,6 +129,11 @@ li {
   padding-bottom: 84px;
   border: 1px solid #aaa;
 }
+@media (max-width: 1300px) {
+  #container {
+    width: 950px;
+  }
+}
 
 .countries-where-pictures-were-taken {
   position: relative;
@@ -148,6 +153,12 @@ section {
   height: 190px;
   display: inline-block;
 }
+@media (max-width: 1300px) {
+  section {
+    width: 433.2px;
+    height: 144.4px;
+  }
+}
 
 picture {
   float: left;
@@ -156,11 +167,29 @@ picture:first-of-type {
   margin-left: 120px;
   margin-right: 60px;
 }
+@media (max-width: 1300px) {
+  picture:first-of-type {
+    margin-left: 90px;
+    margin-right: 45.6px;
+  }
+}
 picture:first-of-type img {
   width: 380px;
   height: 570px;
 }
+@media (max-width: 1300px) {
+  picture:first-of-type img {
+    width: 288.8px;
+    height: auto;
+  }
+}
 picture:last-of-type img {
   width: 570px;
   height: 380px;
+}
+@media (max-width: 1300px) {
+  picture:last-of-type img {
+    width: 433.2px;
+    height: auto;
+  }
 }
