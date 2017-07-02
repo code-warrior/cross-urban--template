@@ -41,10 +41,10 @@ li {
 
    p {
       text-align: right;
-      top: $height--first-picture;
+      top: $height--portrait-picture;
       left: $grid--column-width + 3;
       position: absolute;
-      width: $height--first-picture;
+      width: $height--portrait-picture;
       transform-origin: top left;
       transform: rotate(-90deg);
    }
