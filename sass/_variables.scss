@@ -31,6 +31,13 @@ $width--large-container:       (31 * $grid--unit) + $grid--column-width; // 950p
 // ----------------------------------------------------------------------------------
 $breakpoint--large: $width--extra-large-container + 50; // 1300px;
 
+// ----------------------------------------------------------------------------------
+// Percentages for Image Widths
+// ----------------------------------------------------------------------------------
+$percentage-width--portrait-picture:  30.4; // Width of image is 30.4% of container
+$percentage-width--landscape-picture: 45.6; // Width of image is 45.6% of container
+$percentage-width--between-images:    4.8;  // Width of gutter/rail is 4.8% of container
+
 
 // ----------------------------------------------------------------------------------
 // Comments
