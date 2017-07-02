@@ -77,9 +77,9 @@ picture {
 
    &:last-of-type {
       img {
-         height: $height--second-picture;
 
          width: $width--landscape-image-at-breakpoint-extra-large;
+         height: $height--landscape-picture; // Do I need this?
       }
    }
 }
