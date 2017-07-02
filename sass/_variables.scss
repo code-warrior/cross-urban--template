@@ -38,6 +38,14 @@ $percentage-width--portrait-picture:  30.4; // Width of image is 30.4% of contai
 $percentage-width--landscape-picture: 45.6; // Width of image is 45.6% of container
 $percentage-width--between-images:    4.8;  // Width of gutter/rail is 4.8% of container
 
+// ----------------------------------------------------------------------------------
+// Image Widths Based on Percentages
+// ----------------------------------------------------------------------------------
+$width--portrait-image-at-breakpoint-extra-large:  ($width--extra-large-container * $percentage-width--portrait-picture) / 100;
+$width--landscape-image-at-breakpoint-extra-large: ($width--extra-large-container * $percentage-width--landscape-picture) / 100;
+$width--portrait-image-at-breakpoint-large:        ($width--large-container * $percentage-width--portrait-picture) / 100;
+$width--landscape-image-at-breakpoint-large:       ($width--large-container * $percentage-width--landscape-picture) / 100;
+$width--distance-between-images:                   ($width--large-container * $percentage-width--between-images) / 100;
 
 // ----------------------------------------------------------------------------------
 // Comments
