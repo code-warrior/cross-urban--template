@@ -51,13 +51,13 @@ li {
 }
 
 section {
-   width: $width--second-picture;
    height: ($height--first-picture - $height--second-picture);
    @include max-width-media-query($breakpoint--large) {
       width: $width--landscape-image-at-breakpoint-large;
       height: ($width--landscape-image-at-breakpoint-large - $width--portrait-image-at-breakpoint-large);
    }
 
+   width: $width--landscape-image-at-breakpoint-extra-large;
    display: inline-block;
 }
 
@@ -76,8 +76,9 @@ picture {
 
    &:last-of-type {
       img {
-         width: $width--second-picture;
          height: $height--second-picture;
+
+         width: $width--landscape-image-at-breakpoint-extra-large;
       }
    }
 }
