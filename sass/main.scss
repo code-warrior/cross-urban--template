@@ -65,10 +65,18 @@ picture {
    float: left;
 
    &:first-of-type {
+      @include max-width-media-query($breakpoint--large) {
+         margin-left: (3 * $grid--unit);
+         margin-right: $width--distance-between-images;
+      }
       margin-left: (4 * $grid--unit);
       margin-right: (2 * $grid--unit);
 
       img {
+         @include max-width-media-query($breakpoint--large) {
+            width: $width--portrait-image-at-breakpoint-large;
+            height: auto;
+         }
 
          width: $width--portrait-image-at-breakpoint-extra-large;
          height: $height--portrait-picture; // Do I need this?
@@ -77,6 +85,10 @@ picture {
 
    &:last-of-type {
       img {
+         @include max-width-media-query($breakpoint--large) {
+            width: $width--landscape-image-at-breakpoint-large;
+            height: auto;
+         }
 
          width: $width--landscape-image-at-breakpoint-extra-large;
          height: $height--landscape-picture; // Do I need this?
