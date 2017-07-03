@@ -4,6 +4,10 @@
 @import 'mixins';
 
 body {
+   @include max-width-media-query($breakpoint--medium) {
+      font-size: ($font-size--base - 1);
+   }
+
    font: #{$font-size--base} / #{$grid--leading} $font-stack;
 }
 
@@ -28,6 +32,13 @@ li {
       width: $width--large-container;
    }
 
+   @include max-width-media-query($breakpoint--medium) {
+      position: relative;
+      width: $width--medium-container;
+      padding-top: (3 * $grid--leading) + 8;
+      padding-bottom: (3 * $grid--leading) + 8;
+   }
+
    overflow: auto;
    margin: (3 * $grid--leading) auto;
    width: $width--extra-large-container;
@@ -40,6 +51,12 @@ li {
    position: relative;
 
    p {
+      @include max-width-media-query($breakpoint--medium) {
+         left: $grid--gutter-width + 2;
+         top: (21 * $grid--unit) + $grid--column-width + 8;
+         width: (21 * $grid--unit) + $grid--column-width + 8;
+      }
+
       text-align: right;
       top: $height--portrait-picture;
       left: $grid--column-width + 3;
@@ -56,6 +73,12 @@ section {
       height: ($width--landscape-image-at-breakpoint-large - $width--portrait-image-at-breakpoint-large);
    }
 
+   @include max-width-media-query($breakpoint--medium) {
+      position: absolute;
+      width: (6 * $grid--unit) + $grid--gutter-width;
+      left: (17 * $grid--unit) + $grid--column-width;
+   }
+
    width: $width--landscape-image-at-breakpoint-extra-large;
    height: ($height--portrait-picture - $height--landscape-picture);
    display: inline-block;
@@ -69,6 +92,11 @@ picture {
          margin-left: (3 * $grid--unit);
          margin-right: $width--distance-between-images;
       }
+
+      @include max-width-media-query($breakpoint--medium) {
+         margin-left: (1 * $grid--unit) + $grid--column-width;
+      }
+
       margin-left: (4 * $grid--unit);
       margin-right: (2 * $grid--unit);
 
@@ -76,6 +104,10 @@ picture {
          @include max-width-media-query($breakpoint--large) {
             width: $width--portrait-image-at-breakpoint-large;
             height: auto;
+         }
+
+         @include max-width-media-query($breakpoint--medium) {
+            width: (14 * $grid--unit) + $grid--column-width;
          }
 
          width: $width--portrait-image-at-breakpoint-extra-large;
@@ -88,6 +120,12 @@ picture {
          @include max-width-media-query($breakpoint--large) {
             width: $width--landscape-image-at-breakpoint-large;
             height: auto;
+         }
+
+         @include max-width-media-query($breakpoint--medium) {
+            width: (22 * $grid--unit) + $grid--gutter-width;
+            margin-top: (3 * $grid--leading) + 5;
+            margin-left: (1 * $grid--unit) + $grid--column-width;
          }
 
          width: $width--landscape-image-at-breakpoint-extra-large;
