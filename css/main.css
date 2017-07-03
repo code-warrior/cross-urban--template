@@ -105,6 +105,11 @@ table {
 body {
   font: 15.625px / 14px "Roboto Condensed", sans-serif;
 }
+@media (max-width: 1024px) {
+  body {
+    font-size: 14.625px;
+  }
+}
 
 h1 {
   font-weight: bold;
@@ -123,7 +128,7 @@ li {
 
 #container {
   overflow: auto;
-  margin: auto;
+  margin: 42px auto;
   width: 1250px;
   padding-top: 84px;
   padding-bottom: 84px;
@@ -132,6 +137,14 @@ li {
 @media (max-width: 1300px) {
   #container {
     width: 950px;
+  }
+}
+@media (max-width: 1024px) {
+  #container {
+    position: relative;
+    width: 770px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 
@@ -147,6 +160,13 @@ li {
   transform-origin: top left;
   transform: rotate(-90deg);
 }
+@media (max-width: 1024px) {
+  .countries-where-pictures-were-taken p {
+    left: 12px;
+    top: 658px;
+    width: 658px;
+  }
+}
 
 section {
   width: 570px;
@@ -157,6 +177,13 @@ section {
   section {
     width: 433.2px;
     height: 144.4px;
+  }
+}
+@media (max-width: 1024px) {
+  section {
+    position: absolute;
+    width: 190px;
+    left: 530px;
   }
 }
 
@@ -173,6 +200,11 @@ picture:first-of-type {
     margin-right: 45.6px;
   }
 }
+@media (max-width: 1024px) {
+  picture:first-of-type {
+    margin-left: 50px;
+  }
+}
 picture:first-of-type img {
   width: 380px;
   height: 570px;
@@ -183,6 +215,11 @@ picture:first-of-type img {
     height: auto;
   }
 }
+@media (max-width: 1024px) {
+  picture:first-of-type img {
+    width: 440px;
+  }
+}
 picture:last-of-type img {
   width: 570px;
   height: 380px;
@@ -191,5 +228,12 @@ picture:last-of-type img {
   picture:last-of-type img {
     width: 433.2px;
     height: auto;
+  }
+}
+@media (max-width: 1024px) {
+  picture:last-of-type img {
+    width: 670px;
+    margin-top: 47px;
+    margin-left: 50px;
   }
 }
