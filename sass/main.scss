@@ -50,13 +50,18 @@ li {
    padding-bottom: (6 * $grid--leading);
    width: $width--extra-large-container;
    overflow: auto;
-
 }
 
 .countries-where-pictures-were-taken {
    position: relative;
 
    p {
+      @include max-width-media-query($breakpoint--large) {
+         top: (14 * $grid--unit) + 12;
+         left: $grid--gutter-width + 10;
+         width: (14 * $grid--unit) + 12;
+      }
+
       @include max-width-media-query($breakpoint--medium) {
          top: (21 * $grid--unit) + $grid--column-width + 8;
          left: $grid--gutter-width + 2;
