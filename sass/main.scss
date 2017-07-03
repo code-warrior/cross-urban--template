@@ -29,7 +29,7 @@ li {
    }
 
    overflow: auto;
-   margin: auto;
+   margin: (3 * $grid--leading) auto;
    width: $width--extra-large-container;
    padding-top: (6 * $grid--leading);
    padding-bottom: (6 * $grid--leading);
