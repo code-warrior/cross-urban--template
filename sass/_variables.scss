@@ -23,11 +23,13 @@ $height--landscape-picture: 380px;
 // ----------------------------------------------------------------------------------
 $width--extra-large-container: (41 * $grid--unit) + $grid--column-width; // 1250px;
 $width--large-container:       (31 * $grid--unit) + $grid--column-width; // 950px;
+$width--medium-container:      (25 * $grid--unit) + $grid--column-width; // 770px;
 
 // ----------------------------------------------------------------------------------
 // Breakpoints
 // ----------------------------------------------------------------------------------
 $breakpoint--large: $width--extra-large-container + 50; // 1300px;
+$breakpoint--medium: ($width--medium-container + 254);     // 1024px;
 
 // ----------------------------------------------------------------------------------
 // Percentages for Image Widths
