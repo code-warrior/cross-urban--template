@@ -29,6 +29,11 @@ li {
 
 #container {
    @include max-width-media-query($breakpoint--large) {
+      padding: {
+         top: (2 * $grid--unit) + 6;
+         bottom: (2 * $grid--unit) + 6;
+      }
+
       width: $width--large-container;
    }
 
