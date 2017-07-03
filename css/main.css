@@ -216,6 +216,8 @@ li {
 }
 @media (max-width: 1300px) {
   #container {
+    padding-top: 66px;
+    padding-bottom: 66px;
     width: 950px;
   }
 }
@@ -239,6 +241,13 @@ li {
   width: 570px;
   text-align: right;
   transform-origin: top left;
+}
+@media (max-width: 1300px) {
+  .countries-where-pictures-were-taken p {
+    top: 432px;
+    left: 20px;
+    width: 432px;
+  }
 }
 @media (max-width: 1024px) {
   .countries-where-pictures-were-taken p {
