@@ -42,9 +42,9 @@ li {
    overflow: auto;
    margin: (3 * $grid--leading) auto;
    width: $width--extra-large-container;
+   border: 1px solid $color--border;
    padding-top: (6 * $grid--leading);
    padding-bottom: (6 * $grid--leading);
-   border: 1px solid #aaa;
 }
 
 .countries-where-pictures-were-taken {
