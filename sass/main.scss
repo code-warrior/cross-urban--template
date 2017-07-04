@@ -39,15 +39,19 @@ li {
 
    @include max-width-media-query($breakpoint--large) {
       position: relative;
-      padding-top: (3 * $grid--leading) + 8;
-      padding-bottom: (3 * $grid--leading) + 8;
+      padding: {
+         top: (3 * $grid--leading) + 8;
+         bottom: (3 * $grid--leading) + 8;
+      }
       width: $width--medium-container;
    }
 
    margin: (3 * $grid--leading) auto;
    border: 1px solid $color--border;
-   padding-top: (6 * $grid--leading);
-   padding-bottom: (6 * $grid--leading);
+   padding: {
+      top:  (6 * $grid--leading);
+      bottom:  (6 * $grid--leading);
+   }
    width: $width--extra-large-container;
    overflow: auto;
 }
@@ -100,16 +104,21 @@ picture {
 
    &:first-of-type {
       @include max-width-media-query($breakpoint--extra-large) {
-         margin-right: $width--distance-between-images;
-         margin-left: (3 * $grid--unit);
+         margin: {
+            right: $width--distance-between-images;
+            left: (3 * $grid--unit);
+         }
       }
 
       @include max-width-media-query($breakpoint--large) {
          margin-left: (1 * $grid--unit) + $grid--column-width;
       }
 
-      margin-right: (2 * $grid--unit);
-      margin-left: (4 * $grid--unit);
+
+      margin: {
+         right: (2 * $grid--unit);
+         left: (4 * $grid--unit);
+      }
 
       img {
          @include max-width-media-query($breakpoint--extra-large) {
