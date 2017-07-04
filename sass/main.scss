@@ -4,7 +4,7 @@
 @import 'mixins';
 
 body {
-   @include max-width-media-query($breakpoint--medium) {
+   @include max-width-media-query($breakpoint--large) {
       font-size: ($font-size--base - 1);
    }
 
@@ -37,7 +37,7 @@ li {
       width: $width--large-container;
    }
 
-   @include max-width-media-query($breakpoint--medium) {
+   @include max-width-media-query($breakpoint--large) {
       position: relative;
       padding-top: (3 * $grid--leading) + 8;
       padding-bottom: (3 * $grid--leading) + 8;
@@ -62,7 +62,7 @@ li {
          width: (14 * $grid--unit) + 12;
       }
 
-      @include max-width-media-query($breakpoint--medium) {
+      @include max-width-media-query($breakpoint--large) {
          top: (21 * $grid--unit) + $grid--column-width + 8;
          left: $grid--gutter-width + 2;
          width: (21 * $grid--unit) + $grid--column-width + 8;
@@ -84,7 +84,7 @@ section {
       height: ($width--landscape-image-at-breakpoint-large - $width--portrait-image-at-breakpoint-large);
    }
 
-   @include max-width-media-query($breakpoint--medium) {
+   @include max-width-media-query($breakpoint--large) {
       position: absolute;
       left: (17 * $grid--unit) + $grid--column-width;
       width: (6 * $grid--unit) + $grid--gutter-width;
@@ -104,7 +104,7 @@ picture {
          margin-left: (3 * $grid--unit);
       }
 
-      @include max-width-media-query($breakpoint--medium) {
+      @include max-width-media-query($breakpoint--large) {
          margin-left: (1 * $grid--unit) + $grid--column-width;
       }
 
@@ -117,7 +117,7 @@ picture {
             height: auto;
          }
 
-         @include max-width-media-query($breakpoint--medium) {
+         @include max-width-media-query($breakpoint--large) {
             width: (14 * $grid--unit) + $grid--column-width;
          }
 
@@ -133,7 +133,7 @@ picture {
             height: auto;
          }
 
-         @include max-width-media-query($breakpoint--medium) {
+         @include max-width-media-query($breakpoint--large) {
             margin-top: (3 * $grid--leading) + 5;
             margin-left: (1 * $grid--unit) + $grid--column-width;
             width: (22 * $grid--unit) + $grid--gutter-width;
