@@ -77,7 +77,7 @@ li {
 
       @include max-width-media-query($breakpoint--large) {
          top: (21 * $grid--unit) + $grid--column-width + 8;
-         left: $grid--gutter-width + 2;
+         left: 2.3%;
          width: (21 * $grid--unit) + $grid--column-width + 8;
       }
 
