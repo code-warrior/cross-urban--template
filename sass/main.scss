@@ -46,6 +46,15 @@ li {
       width: $width--medium-container;
    }
 
+   @include max-width-media-query($breakpoint--medium) {
+      padding: {
+         top: 5.5%;
+         bottom: 5.5%;
+      }
+
+      max-width: 91.6%;
+   }
+
    margin: (3 * $grid--leading) auto;
    border: 1px solid $color--border;
    padding: {
@@ -94,6 +103,13 @@ section {
       width: (6 * $grid--unit) + $grid--gutter-width;
    }
 
+   @include max-width-media-query($breakpoint--medium) {
+      top: 5.5%;
+      left: 69.8%;
+      width: 23.8%;
+      height: auto;
+   }
+
    display: inline-block;
    width: $width--landscape-image-at-breakpoint-extra-large;
    height: ($height--portrait-picture - $height--landscape-picture);
@@ -114,6 +130,15 @@ picture {
          margin-left: (1 * $grid--unit) + $grid--column-width;
       }
 
+      @include max-width-media-query($breakpoint--medium) {
+         display: block;
+         float: none;
+         margin: {
+            right: 0;
+            left: 6.5%;
+         }
+         max-width: 57%;
+      }
 
       margin: {
          right: (2 * $grid--unit);
@@ -130,12 +155,23 @@ picture {
             width: (14 * $grid--unit) + $grid--column-width;
          }
 
+         @include max-width-media-query($breakpoint--medium) {
+            width: 100%;
+         }
+
          width: $width--portrait-image-at-breakpoint-extra-large;
          height: $height--portrait-picture; // Do I need this?
       }
    }
 
    &:last-of-type {
+      @include max-width-media-query($breakpoint--medium) {
+         display: block;
+         float: none;
+         margin-left: 0;
+         max-width: 87%;
+      }
+
       img {
          @include max-width-media-query($breakpoint--extra-large) {
             width: $width--landscape-image-at-breakpoint-large;
@@ -146,6 +182,14 @@ picture {
             margin-top: (3 * $grid--leading) + 5;
             margin-left: (1 * $grid--unit) + $grid--column-width;
             width: (22 * $grid--unit) + $grid--gutter-width;
+         }
+
+         @include max-width-media-query($breakpoint--medium) {
+            margin: {
+               top: 6.5%;
+               left: 7.5%;
+            }
+            width: 100%;
          }
 
          width: $width--landscape-image-at-breakpoint-extra-large;
