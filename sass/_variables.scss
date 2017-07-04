@@ -30,6 +30,7 @@ $width--medium-container:      (25 * $grid--unit) + $grid--column-width; // 770p
 // ----------------------------------------------------------------------------------
 $breakpoint--extra-large: ($width--extra-large-container + 50);     // 1300px;
 $breakpoint--large:       ($width--medium-container + 254);         // 1024px;
+$breakpoint--medium:      (28 * $grid--unit);                       // 840px;
 
 // ----------------------------------------------------------------------------------
 // Percentages for Image Widths
