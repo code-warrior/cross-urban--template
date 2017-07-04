@@ -28,7 +28,7 @@ li {
 }
 
 #container {
-   @include max-width-media-query($breakpoint--large) {
+   @include max-width-media-query($breakpoint--extra-large) {
       padding: {
          top: (2 * $grid--unit) + 6;
          bottom: (2 * $grid--unit) + 6;
@@ -56,7 +56,7 @@ li {
    position: relative;
 
    p {
-      @include max-width-media-query($breakpoint--large) {
+      @include max-width-media-query($breakpoint--extra-large) {
          top: (14 * $grid--unit) + 12;
          left: $grid--gutter-width + 10;
          width: (14 * $grid--unit) + 12;
@@ -79,7 +79,7 @@ li {
 }
 
 section {
-   @include max-width-media-query($breakpoint--large) {
+   @include max-width-media-query($breakpoint--extra-large) {
       width: $width--landscape-image-at-breakpoint-large;
       height: ($width--landscape-image-at-breakpoint-large - $width--portrait-image-at-breakpoint-large);
    }
@@ -99,7 +99,7 @@ picture {
    float: left;
 
    &:first-of-type {
-      @include max-width-media-query($breakpoint--large) {
+      @include max-width-media-query($breakpoint--extra-large) {
          margin-right: $width--distance-between-images;
          margin-left: (3 * $grid--unit);
       }
@@ -112,7 +112,7 @@ picture {
       margin-left: (4 * $grid--unit);
 
       img {
-         @include max-width-media-query($breakpoint--large) {
+         @include max-width-media-query($breakpoint--extra-large) {
             width: $width--portrait-image-at-breakpoint-large;
             height: auto;
          }
@@ -128,7 +128,7 @@ picture {
 
    &:last-of-type {
       img {
-         @include max-width-media-query($breakpoint--large) {
+         @include max-width-media-query($breakpoint--extra-large) {
             width: $width--landscape-image-at-breakpoint-large;
             height: auto;
          }
