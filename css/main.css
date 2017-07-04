@@ -229,6 +229,13 @@ li {
     width: 770px;
   }
 }
+@media (max-width: 840px) {
+  #container {
+    padding-top: 5.5%;
+    padding-bottom: 5.5%;
+    max-width: 91.6%;
+  }
+}
 
 .countries-where-pictures-were-taken {
   position: relative;
@@ -252,7 +259,7 @@ li {
 @media (max-width: 1024px) {
   .countries-where-pictures-were-taken p {
     top: 658px;
-    left: 12px;
+    left: 2.3%;
     width: 658px;
   }
 }
@@ -275,6 +282,14 @@ section {
     width: 190px;
   }
 }
+@media (max-width: 840px) {
+  section {
+    top: 5.5%;
+    left: 69.8%;
+    width: 23.8%;
+    height: auto;
+  }
+}
 
 picture {
   float: left;
@@ -294,6 +309,15 @@ picture:first-of-type {
     margin-left: 50px;
   }
 }
+@media (max-width: 840px) {
+  picture:first-of-type {
+    display: block;
+    float: none;
+    margin-right: 0;
+    margin-left: 6.5%;
+    max-width: 57%;
+  }
+}
 picture:first-of-type img {
   width: 380px;
   height: 570px;
@@ -307,6 +331,19 @@ picture:first-of-type img {
 @media (max-width: 1024px) {
   picture:first-of-type img {
     width: 440px;
+  }
+}
+@media (max-width: 840px) {
+  picture:first-of-type img {
+    width: 100%;
+  }
+}
+@media (max-width: 840px) {
+  picture:last-of-type {
+    display: block;
+    float: none;
+    margin-left: 0;
+    max-width: 87%;
   }
 }
 picture:last-of-type img {
@@ -324,5 +361,12 @@ picture:last-of-type img {
     margin-top: 47px;
     margin-left: 50px;
     width: 670px;
+  }
+}
+@media (max-width: 840px) {
+  picture:last-of-type img {
+    margin-top: 6.5%;
+    margin-left: 7.5%;
+    width: 100%;
   }
 }
