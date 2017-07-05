@@ -1,0 +1,60 @@
+// ----------------------------------------------------------------------------------
+// Grid
+// ----------------------------------------------------------------------------------
+$grid--column-width: 20px;
+$grid--gutter-width: 10px;
+$grid--unit:        ($grid--column-width + $grid--gutter-width);
+$grid--leading:      14px;
+
+// ----------------------------------------------------------------------------------
+// Font
+// ----------------------------------------------------------------------------------
+$font-size--base: 15.625px;
+$font-stack:     'Roboto Condensed', sans-serif;
+
+// ----------------------------------------------------------------------------------
+// Initial Image Dimensions
+// ----------------------------------------------------------------------------------
+$height--portrait-picture:  570px;
+$height--landscape-picture: 380px;
+
+// ----------------------------------------------------------------------------------
+// Primary Container Widths
+// ----------------------------------------------------------------------------------
+$width--extra-large-container: (41 * $grid--unit) + $grid--column-width; // 1250px;
+$width--large-container:       (31 * $grid--unit) + $grid--column-width; // 950px;
+$width--medium-container:      (25 * $grid--unit) + $grid--column-width; // 770px;
+
+// ----------------------------------------------------------------------------------
+// Breakpoints
+// ----------------------------------------------------------------------------------
+$breakpoint--extra-large: ($width--extra-large-container + 50);     // 1300px;
+$breakpoint--large:       ($width--medium-container + 254);         // 1024px;
+$breakpoint--medium:      (28 * $grid--unit);                       // 840px;
+$breakpoint--small:       (24 * $grid--unit);                       // 720px;
+
+// ----------------------------------------------------------------------------------
+// Percentages for Image Widths
+// ----------------------------------------------------------------------------------
+$percentage-width--portrait-picture:  30.4; // Width of image is 30.4% of container
+$percentage-width--landscape-picture: 45.6; // Width of image is 45.6% of container
+$percentage-width--between-images:    4.8;  // Width of gutter/rail is 4.8% of container
+
+// ----------------------------------------------------------------------------------
+// Image Widths Based on Percentages
+// ----------------------------------------------------------------------------------
+$width--portrait-image-at-breakpoint-extra-large:  ($width--extra-large-container * $percentage-width--portrait-picture) / 100;
+$width--landscape-image-at-breakpoint-extra-large: ($width--extra-large-container * $percentage-width--landscape-picture) / 100;
+$width--portrait-image-at-breakpoint-large:        ($width--large-container * $percentage-width--portrait-picture) / 100;
+$width--landscape-image-at-breakpoint-large:       ($width--large-container * $percentage-width--landscape-picture) / 100;
+$width--distance-between-images:                   ($width--large-container * $percentage-width--between-images) / 100;
+
+// ----------------------------------------------------------------------------------
+// Colors
+// ----------------------------------------------------------------------------------
+$color--border: #aaa;
+
+// ----------------------------------------------------------------------------------
+// Comments
+// ----------------------------------------------------------------------------------
+// * Use split gutters

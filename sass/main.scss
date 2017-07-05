@@ -1,12 +1,22 @@
-@import 'fonts';
 @import 'reset';
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
 
 body {
-   font: 15.625px / 14px 'Roboto Condensed', sans-serif;
+   @include max-width-media-query($breakpoint--large) {
+      font-size: ($font-size--base - 1);
+   }
+
+   font: #{$font-size--base} / #{$grid--leading} $font-stack;
 }
 
-strong {
+h1 {
    font-weight: bold;
+
+   span {
+      font-weight: normal;
+   }
 }
 
 ol {
@@ -14,52 +24,192 @@ ol {
 }
 
 li {
-   margin-left: 14px;
+   margin-left: $grid--leading;
 }
 
 #container {
-   // background: transparent url('../img/16--72dpi.png') no-repeat scroll center top;
-   margin: auto;
-   width: 1241px;
-   height: 733px;
-   border: 1px solid black;
+   @include max-width-media-query($breakpoint--extra-large) {
+      padding: {
+         top: (2 * $grid--unit) + 6;
+         bottom: (2 * $grid--unit) + 6;
+      }
+      width: $width--large-container;
+   }
+
+   @include max-width-media-query($breakpoint--large) {
+      position: relative;
+      padding: {
+         top: (3 * $grid--leading) + 8;
+         bottom: (3 * $grid--leading) + 8;
+      }
+      width: $width--medium-container;
+   }
+
+   @include max-width-media-query($breakpoint--medium) {
+      padding: {
+         top: 5.5%;
+         bottom: 5.5%;
+      }
+      max-width: 91.6%;
+   }
+
+   margin: $grid--leading auto;
+   border: 1px solid $color--border;
+   padding: {
+      top:  (6 * $grid--leading);
+      bottom:  (6 * $grid--leading);
+   }
+   width: $width--extra-large-container;
+   overflow: auto;
 }
 
 .countries-where-pictures-were-taken {
    position: relative;
 
    p {
-      text-align: right;
-      top: 652px; //667px;
-      left: 24px;
+      @include max-width-media-query($breakpoint--extra-large) {
+         top: (14 * $grid--unit) + 12;
+         left: $grid--gutter-width + 10;
+         width: (14 * $grid--unit) + 12;
+      }
+
+      @include max-width-media-query($breakpoint--large) {
+         top: (21 * $grid--unit) + $grid--column-width + 8;
+         left: 2.3%;
+         width: (21 * $grid--unit) + $grid--column-width + 8;
+      }
+
       position: absolute;
-      width: 567px;
-      transform-origin: top left;
+      top: $height--portrait-picture;
+      left: $grid--column-width + 3;
       transform: rotate(-90deg);
-
-   }
-
-   &__country-1 {
-   }
-
-   &__country-2 {
+      width: $height--portrait-picture;
+      text-align: right;
+      transform-origin: top left;
    }
 }
 
-.picture {
+section {
+   @include max-width-media-query($breakpoint--extra-large) {
+      width: $width--landscape-image-at-breakpoint-large;
+      height: ($width--landscape-image-at-breakpoint-large - $width--portrait-image-at-breakpoint-large);
+   }
+
+   @include max-width-media-query($breakpoint--large) {
+      position: absolute;
+      left: (17 * $grid--unit) + $grid--column-width;
+      width: (6 * $grid--unit) + $grid--gutter-width;
+   }
+
+   @include max-width-media-query($breakpoint--medium) {
+      top: 3.5%;
+      left: 69.8%;
+      width: 23.8%;
+      height: auto;
+   }
+
+   @include max-width-media-query($breakpoint--small) {
+      display: block;
+      position: relative;
+      left: 6.5%;
+      margin-top: $grid--leading;
+      width: 93.5%;
+   }
+
+   display: inline-block;
+   width: $width--landscape-image-at-breakpoint-extra-large;
+   height: ($height--portrait-picture - $height--landscape-picture);
+}
+
+picture {
    float: left;
-   display: inline-block;
-   margin-left: 135px;
-   margin-top: 85px;
-   margin-right: 64px;
 
-   &--country-of-origin {
+   &:first-of-type {
+      @include max-width-media-query($breakpoint--extra-large) {
+         margin: {
+            right: $width--distance-between-images;
+            left: (3 * $grid--unit);
+         }
+      }
+
+      @include max-width-media-query($breakpoint--large) {
+         margin-left: (1 * $grid--unit) + $grid--column-width;
+      }
+
+      @include max-width-media-query($breakpoint--medium) {
+         display: block;
+         float: none;
+         margin: {
+            right: 0;
+            left: 6.5%;
+         }
+         max-width: 57%;
+      }
+
+      @include max-width-media-query($breakpoint--small) {
+         max-width: 87%;
+      }
+
+      margin: {
+         right: (2 * $grid--unit);
+         left: (4 * $grid--unit);
+      }
+
+      img {
+         @include max-width-media-query($breakpoint--extra-large) {
+            width: $width--portrait-image-at-breakpoint-large;
+            height: auto;
+         }
+
+         @include max-width-media-query($breakpoint--large) {
+            width: (14 * $grid--unit) + $grid--column-width;
+         }
+
+         @include max-width-media-query($breakpoint--medium) {
+            width: 100%;
+         }
+
+         width: $width--portrait-image-at-breakpoint-extra-large;
+         height: $height--portrait-picture; // Do I need this?
+      }
    }
-}
 
-.definition {
-   width: 300px;
-   height: 188px;
-   margin-top: 85px;
-   display: inline-block;
+   &:last-of-type {
+      @include max-width-media-query($breakpoint--medium) {
+         display: block;
+         float: none;
+         margin-left: 0;
+         max-width: 87%;
+      }
+
+      img {
+         @include max-width-media-query($breakpoint--extra-large) {
+            width: $width--landscape-image-at-breakpoint-large;
+            height: auto;
+         }
+
+         @include max-width-media-query($breakpoint--large) {
+            margin-top: (3 * $grid--leading) + 5;
+            margin-left: (1 * $grid--unit) + $grid--column-width;
+            width: (22 * $grid--unit) + $grid--gutter-width;
+         }
+
+         @include max-width-media-query($breakpoint--medium) {
+            margin: {
+               top: 6.5%;
+               left: 7.5%;
+            }
+            width: 100%;
+         }
+
+         @include max-width-media-query($breakpoint--small) {
+            margin: {
+               top: $grid--leading;
+            }
+         }
+
+         width: $width--landscape-image-at-breakpoint-extra-large;
+         height: $height--landscape-picture; // Do I need this?
+      }
+   }
 }
