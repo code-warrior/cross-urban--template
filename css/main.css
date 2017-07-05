@@ -207,7 +207,7 @@ li {
 }
 
 #container {
-  margin: 42px auto;
+  margin: 14px auto;
   border: 1px solid #aaa;
   padding-top: 84px;
   padding-bottom: 84px;
@@ -290,6 +290,15 @@ section {
     height: auto;
   }
 }
+@media (max-width: 720px) {
+  section {
+    display: block;
+    position: relative;
+    left: 6.5%;
+    margin-top: 14px;
+    width: 93.5%;
+  }
+}
 
 picture {
   float: left;
@@ -316,6 +325,11 @@ picture:first-of-type {
     margin-right: 0;
     margin-left: 6.5%;
     max-width: 57%;
+  }
+}
+@media (max-width: 720px) {
+  picture:first-of-type {
+    max-width: 87%;
   }
 }
 picture:first-of-type img {
@@ -368,5 +382,10 @@ picture:last-of-type img {
     margin-top: 6.5%;
     margin-left: 7.5%;
     width: 100%;
+  }
+}
+@media (max-width: 720px) {
+  picture:last-of-type img {
+    margin-top: 14px;
   }
 }
