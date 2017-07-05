@@ -108,6 +108,14 @@ section {
       height: auto;
    }
 
+   @include max-width-media-query($breakpoint--small) {
+      display: block;
+      position: relative;
+      left: 6.5%;
+      margin-top: $grid--leading;
+      width: 93.5%;
+   }
+
    display: inline-block;
    width: $width--landscape-image-at-breakpoint-extra-large;
    height: ($height--portrait-picture - $height--landscape-picture);
@@ -136,6 +144,10 @@ picture {
             left: 6.5%;
          }
          max-width: 57%;
+      }
+
+      @include max-width-media-query($breakpoint--small) {
+         max-width: 87%;
       }
 
       margin: {
@@ -188,6 +200,12 @@ picture {
                left: 7.5%;
             }
             width: 100%;
+         }
+
+         @include max-width-media-query($breakpoint--small) {
+            margin: {
+               top: $grid--leading;
+            }
          }
 
          width: $width--landscape-image-at-breakpoint-extra-large;
