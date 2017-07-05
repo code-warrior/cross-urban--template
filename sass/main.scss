@@ -53,7 +53,7 @@ li {
       max-width: 91.6%;
    }
 
-   margin: (3 * $grid--leading) auto;
+   margin: $grid--leading auto;
    border: 1px solid $color--border;
    padding: {
       top:  (6 * $grid--leading);
